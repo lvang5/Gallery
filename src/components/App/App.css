@@ -21,3 +21,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.gallery {
+    text-align: left;
+    background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: arial, helvetica;
+    width: 600px;
+    margin: 50px auto;
+}
+
+
+
+.img {
+  width: 300px; /*set the width or max-width*/
+  height: auto;
+
+}
