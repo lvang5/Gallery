@@ -7,12 +7,14 @@ class Images extends Component {
 
     render() {
         return (
-            <div>
-                {this.props.galleryItems.map((image) => {
-                    return (
-                            <GalleryItems key={image.id} image={image} />
-                    )
-                })}
+            <div className="row">
+              {this.props.galleryItems.map((images) => {
+                  return (
+                      <GalleryItems key={images.id} image={images}/>
+                  );
+              
+              })}
+              
             </div>
 
         );
@@ -20,3 +22,5 @@ class Images extends Component {
 }
 
 export default Images;
+
+

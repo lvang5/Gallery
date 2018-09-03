@@ -4,6 +4,7 @@ import Header from '../Header/Header.js';
 import axios from 'axios';
 import './App.css';
 
+
 class App extends Component {
 
   constructor(props) {
@@ -32,13 +33,15 @@ getImages() {
     });
 }
 
+
+
   render() {
     return (
       <div className="App">
        <Header/>
         <br/>
         <h1 className="gallery">My Gallery</h1>
-        <GalleryList />
+        <GalleryList galleryItems={this.state.galleryItems}/>
         {/* {this.state.galleryItems.map((image, i) => {
           return (
             <div  key={i}> 

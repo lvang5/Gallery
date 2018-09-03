@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class GalleryList extends Component {
     render() {
         return (
-            <div  key={this.props.image.id}> 
+            <div className="column" key={this.props.image.id}> 
             <img className="img" alt={this.props.image.id} src={this.props.image.path} />
+            <br/>
+            <button className="favorite" >Favorite</button>
             </div>
         );
     }
