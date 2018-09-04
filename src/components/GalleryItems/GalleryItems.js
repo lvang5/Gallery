@@ -27,7 +27,7 @@ class GalleryList extends Component {
         if (clicked) {
             swap = <img className="img" alt={this.props.image.id} src={this.props.image.path}/>
         } else {
-           swap =  <p>{this.props.image.description}</p>
+           swap =  <div className="des">{this.props.image.description}</div>
         }
         
         return (

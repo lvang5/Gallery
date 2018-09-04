@@ -44,6 +44,7 @@ background-size:100px 50px;
     width: 600px;
     margin: 50px auto;
     
+    
 }
 
 
@@ -51,7 +52,20 @@ background-size:100px 50px;
 .img {
   width: 300px; /*set the width or max-width*/
   height: auto;
+  border-style: solid;
+    border-width: 5px;
 
+}
+
+.des {
+  height: 600px;
+  line-height: 30px;
+  width: auto;
+  text-align: center center;
+  border-style: solid;
+  border-width: 5px;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 2.5em;
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
