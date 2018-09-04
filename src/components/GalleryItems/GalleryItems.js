@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 
 
+
 class GalleryList extends Component {
     constructor(props) {
         super(props)
         this.state = { clicked: true }
     }
-    favoriteClick = () => {
+    favoriteClick = (event) => {
         console.log('button was clicked');
+        this.props.addLike(this.props.image.id);
         
     }
-
-
     handleImageClick = () => {
        this.setState({
         clicked: !this.state.clicked
        })
 
     }
-
-
-
     render() {
         const clicked = this.state.clicked;
         let swap;
@@ -31,10 +28,13 @@ class GalleryList extends Component {
         }
         
         return (
-            <div className="column" onClick={this.handleImageClick} key={this.props.image.id}>
-                {swap}
-                <br />
+            <div className="column">
+            <div onClick={this.handleImageClick} key={this.props.image.id}>
+                {swap }
+            </div>
+            <br />
                 <button className="favorite" onClick={this.favoriteClick}>Favorite</button>
+                <p className="likes">Likes: {this.props.image.likes}</p>
             </div>
         );
     }
