@@ -42,14 +42,6 @@ getImages() {
         <br/>
         <h1 className="gallery">My Gallery</h1>
         <GalleryList galleryItems={this.state.galleryItems}/>
-        {/* {this.state.galleryItems.map((image, i) => {
-          return (
-            <div  key={i}> 
-              <img className="img" alt={i} src={image.path} />
-              </div>
-          )
-        })} */}
-        
       </div>
     );
   }
