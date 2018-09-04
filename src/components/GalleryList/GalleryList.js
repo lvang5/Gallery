@@ -1,57 +1,37 @@
 import React, { Component } from 'react';
 import GalleryItems from '../GalleryItems/GalleryItems.js';
-import Description from '../Description/Description.js';
 
 
-class Images extends Component {
-    constructor() {
-        super()
-        this.state = { clicked: false }
-    }
 
-    handleImageClick = () => {
-        console.log('image clicked');
-        
-        this.setState({ clicked: true });
-    }
+class GalleryList extends Component {
+ 
 
-    handleDesClick = () => {
-        console.log('image clicked');
-        this.setState({ clicked: false })
-    }
 
-    render() {
+        render() {
 
-        const clicked = this.state.clicked;
-        let img;
 
-        return (
-            <div className="row">
-                {this.props.galleryItems.map((images) => {
-                     if (clicked) {
-                         console.log(clicked);
-                         img = <Description onClick={this.handleDesClick} clicked={clicked} key={images.id} image={images}/>
-                        
-                    } else {
-                        console.log(clicked);
-                        img = <GalleryItems onClick={this.handleImageClick} clicked={clicked} key={images.id} image={images}/>;
-                        
-                    }
-                    return (
-                        <div key={images.id}>
-                            {img}
-                        </div>
 
-                    );
+            return (
+                <div className="row">
 
-                })}
+                    {this.props.galleryItems.map((images) => {
 
-            </div>
+                        return (
 
-        );
-    }
+                            <GalleryItems key={images.id} image={images} />
+
+                        );
+
+
+                    })}
+
+                </div>
+
+            );
+        }
+    
 }
 
-export default Images;
+export default GalleryList;
 
 

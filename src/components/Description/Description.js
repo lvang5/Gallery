@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
 class Description extends Component {
-    handleDesClick = () => {
-        this.setState({ clicked: false })
+    favoriteClick = () => {
+        console.log('button was clicked');
+        
     }
     render() {
         return(
