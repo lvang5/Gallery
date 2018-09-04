@@ -27,17 +27,7 @@
 
 //         const clicked = this.state.clicked;
 //         let img;
-if (clicked) {
-    console.log(images.id);
-    this.state.clicked && <Description onClick={this.handleDesClick} key={images.id} image={images}/>
-    
-   
-} else {
-   console.log(clicked);
-   this.state.clicked && <GalleryItems onClick={this.handleImageClick} key={images.id} image={images}/>
-   
-   
-}
+
 //         return (
 //             <div key={images.id}>
 //                 {img}
